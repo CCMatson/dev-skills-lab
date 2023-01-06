@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/style.css">
-  <title><%= title %></title>
+  <title>Document</title>
 </head>
 <body>
-  <h1><%= title %></h1>
-  <a href="/skills">A List of My Dev Skills</a>
+  <h1>Dev Skills</h1>
+  <ul>
+    <% skills.forEach(skill => { %>
+      <li>
+				<%= skill.skill %> 
+				- 
+				<%= skill.done ? 'done' : 'not done' %>
+			</li>
+    <% }) %>
+  </ul>
 </body>
 </html>
